@@ -26,12 +26,31 @@ const Scene = sequelize.define('scene', {
         defaultValue: null,
         comment: "Tên scene"
     },
-    category_id:{
+    categoryId:{
         type: DataTypes.BIGINT,
         allowNull: true,
         defaultValue: null,
         comment: "Loại scene"
+    },
+    status:{
+        type: DataTypes.SMALLINT,
+        allowNull: true,
+        defaultValue: null,
+        comment: "Trạng thái"
+    },
+    createdBy:{
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: null,
+        comment: "Tạo bởi"
+    },
+    updatedBy:{
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: null,
+        comment: "Cập nhật bởi"
     }
+
 }, {
     // Other model options go here
 });
